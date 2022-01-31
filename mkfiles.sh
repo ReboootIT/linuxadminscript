@@ -52,7 +52,7 @@ while getopts ":v:h:s:n:f:" opt; do
 done
 shift $((OPTIND-1))
 
-
+for i in {1..5}; do truncate -s ${size}  ${name}${i}; done
 
 truncate -s ${size} $name{1..${count}}.txt
 
